@@ -3,7 +3,8 @@ import React from 'react';
 const BlogPost = () => {
     return (
       <div className="p-4">
-        <div className="container grid grid-cols-3">
+        <div className="container grid grid-cols-3 gap-7">
+          
         <div className="card w-80 bg-base-100 shadow-xl">
           <figure>
             <img
@@ -53,6 +54,7 @@ const BlogPost = () => {
             </div>
           </div>
         </div>
+
       </div>
       </div>
     );

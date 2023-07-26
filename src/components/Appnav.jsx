@@ -14,7 +14,9 @@ const Appnav = () => {
   }, []);
 
   return (
-    <div className="navbar bg-base-100 shadow">
+    <div className="app-nav shadow">
+      <div className="container">
+      <div className="navbar bg-base-100 ">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -51,7 +53,7 @@ const Appnav = () => {
             })}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">.আমার ব্লগ</a>
+        <a className="normal-case text-xl font-bold">.আমার ব্লগ</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -68,6 +70,8 @@ const Appnav = () => {
             );
           })}
         </ul>
+      </div>
+    </div>
       </div>
     </div>
   );
