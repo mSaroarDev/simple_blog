@@ -14,9 +14,8 @@ const Appnav = () => {
   }, []);
 
   return (
-    <div className="app-nav shadow">
-      <div className="container">
-      <div className="navbar bg-base-100 ">
+    
+      <div className="navbar bg-base-100 fixed top-0 z-50 px-16 mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -42,15 +41,17 @@ const Appnav = () => {
             <li className="font-bold">
               <NavLink to={"/"}>হোম</NavLink>
             </li>
-            {categories.map((menu, index) => {
-              return (
-                <li key={index}>
-                  <NavLink to={"/bycategory/" + menu["id"]}>
-                    {menu["name"]}
-                  </NavLink>
-                </li>
-              );
-            })}
+            {
+              categories.map((menu, index) => {
+                return (
+                  <li key={index}>
+                    <NavLink to={"/bycategory/" + menu["id"]}>
+                      {menu["name"]}
+                    </NavLink>
+                  </li>
+                );
+              })
+            }
           </ul>
         </div>
         <a className="normal-case text-xl font-bold">.আমার ব্লগ</a>
@@ -70,8 +71,6 @@ const Appnav = () => {
             );
           })}
         </ul>
-      </div>
-    </div>
       </div>
     </div>
   );
