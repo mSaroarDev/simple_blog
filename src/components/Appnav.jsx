@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { postCatergory } from "../api/APICall";
 
@@ -41,13 +41,15 @@ const Appnav = () => {
               <NavLink to={"/"}>হোম</NavLink>
             </li>
             {
-            categories.map((menu) => (
-              <li className="font-bold">
-                <NavLink key={menu['id']} to={"/bycategory/" + menu["id"]}>
-                  {menu["name"]}
-                </NavLink>
-              </li>
-            ))
+            categories.map((menu, i) => {
+              return (
+                <li key={i.toString()} className="font-bold">
+                  <NavLink to={"/bycategory/" + menu["id"]}>
+                    {menu["name"]}
+                  </NavLink>
+                </li>
+              );
+            })
             }
           </ul>
         </div>
@@ -59,10 +61,10 @@ const Appnav = () => {
             <NavLink to={"/"}>হোম</NavLink>
           </li>
           {
-            categories.map((menu, index) => {
+            categories.map((menu, i) => {
               return (
-                <li className="font-bold">
-                  <NavLink key={menu} to={"/bycategory/" + menu["id"]}>
+                <li key={i.toString()} className="font-bold">
+                  <NavLink to={"/bycategory/" + menu["id"]}>
                     {menu["name"]}
                   </NavLink>
                 </li>

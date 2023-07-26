@@ -32,3 +32,13 @@ export async function postList(id){
         return [];
     }
 }
+
+export async function postDetailsFun(id){
+    let res = await axios.get(baseUrl + '/post-details/' + id);
+
+    if(res.status === 200){
+        return res.data;
+    }else{
+        return []
+    }
+}
