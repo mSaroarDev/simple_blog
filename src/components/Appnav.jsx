@@ -44,8 +44,8 @@ const Appnav = () => {
             {
               categories.map((menu, index) => {
                 return (
-                  <li key={index}>
-                    <NavLink to={"/bycategory/" + menu["id"]}>
+                  <li>
+                    <NavLink key={index.toString()} to={"/bycategory/" + menu["id"]}>
                       {menu["name"]}
                     </NavLink>
                   </li>

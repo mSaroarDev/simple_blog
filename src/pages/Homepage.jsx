@@ -18,7 +18,7 @@ const Homepage = () => {
     return (
         <Layout>
             {
-                list == null ? <Loader /> : <BlogPost list={list} />
+                list === null ? <Loader /> : <BlogPost list={list} />
             }
         </Layout>
     );

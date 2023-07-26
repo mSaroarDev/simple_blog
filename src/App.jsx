@@ -10,8 +10,8 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Homepage/>} />
-          <Route path='/bycategory/:categoryId' element={<ByCategory/>} />
-          <Route path='/details/:postId' element={<PostDetails/>} />
+          <Route path='/bycategory/:categoryId' element={<ByCategory />} />
+          <Route path='/details/:postId' element={<PostDetails />} />
         </Routes>
       </BrowserRouter>
     </div>

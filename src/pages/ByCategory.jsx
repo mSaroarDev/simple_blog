@@ -10,8 +10,8 @@ const ByCategory = () => {
     const {categoryId} = useParams();
     const [list, setList] = useState(null);
 
-    useEffect(()=>{
-        (async () => {
+    useEffect(() => {
+        (async() => {
             let res = await postList(categoryId);
             setList(res);
         })();
@@ -20,7 +20,7 @@ const ByCategory = () => {
     return (
         <Layout>
             {
-                list == null ? <Loader/> : <BlogPost list={list}/>
+                list === null ? <Loader /> : <BlogPost list={list} />
             }
         </Layout>
     );

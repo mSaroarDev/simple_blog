@@ -11,7 +11,7 @@ const BlogPost = (props) => {
           {
             props.list.map((item, index)=>{
               return (
-                <Link key={index} to={"/details/" + item["id"]}>
+                <Link key={index.toString()} to={"/details/" + item["id"]}>
                   <div className="card w-80 bg-base-100 shadow-xl mb-7">
                 <figure>
                   <img
