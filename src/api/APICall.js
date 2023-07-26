@@ -22,3 +22,13 @@ export async function newestPost(){
         return [];
     }
 }
+
+export async function postList(id){
+    let res = await axios.get(baseUrl + '/post-list/' + id);
+    
+    if(res.status === 200){
+        return res.data;
+    }else{
+        return [];
+    }
+}

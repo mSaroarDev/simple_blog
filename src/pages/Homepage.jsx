@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { newestPost } from '../api/APICall';
 import BlogPost from '../components/BlogPost';
 import Loader from '../components/Loader';
 import Layout from '../layout/Layout';
@@ -9,15 +10,15 @@ const Homepage = () => {
 
     useEffect(() => {
         (async() => {
-            const res = await newestPost();
+            let res = await newestPost();
             setList(res);
-        })()
+        })();
     }, []);
 
     return (
         <Layout>
             {
-                list === null ? <Loader/> : <BlogPost list={list} />
+                list == null ? <Loader /> : <BlogPost list={list} />
             }
         </Layout>
     );
